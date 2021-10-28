@@ -1,0 +1,32 @@
+import styled from "styled-components";
+
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 20px;
+
+  div {
+    flex: 1;
+  }
+
+  .information {
+    display: flex;
+    justify-content: space-between;
+  }
+  buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  Button {
+    background-color: darkorange;
+  }
+
+  img {
+    max-width: 80px;
+    object-fit: cover;
+    margin-left: 40px;
+  }
+`;
