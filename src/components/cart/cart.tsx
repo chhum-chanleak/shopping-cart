@@ -2,7 +2,7 @@ import CartItem from "../cart-item/cart-item";
 //Styles
 import { Wrapper } from "./cart-style";
 //Types
-import { CartItemType } from "../App";
+import { CartItemType } from "../../App";
 
 type Props = {
   cartItems: CartItemType[];
@@ -27,6 +27,9 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
         />
       ))}
       <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
+      <button>
+        <a href="/">Back</a>
+      </button>
     </Wrapper>
   );
 };

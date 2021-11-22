@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useQuery } from "react-query";
-//componets
-import Cart from "./cart/cart";
-import Item from "./item/item";
+//components
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/footer";
+import Cart from "./components/cart/cart";
+import Item from "./components/item/item";
 import Drawer from "@material-ui/core/Drawer";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Grid from "@material-ui/core/Grid";
@@ -21,6 +23,7 @@ export type CartItemType = {
   amount: number;
 };
 
+//fetch api
 const getProducts = async (): Promise<CartItemType[]> =>
   await (await fetch("https://fakestoreapi.com/products")).json();
 
@@ -31,8 +34,6 @@ const App = () => {
     "products",
     getProducts
   );
-
-  console.log(data);
 
   const getTotalItems = (items: CartItemType[]) =>
     items.reduce((total: number, item) => total + item.amount, 0);
@@ -70,6 +71,7 @@ const App = () => {
 
   return (
     <Wrapper>
+      <Navbar />
       <Drawer anchor="right" open={cartOpen} onClose={() => setCartOpen(false)}>
         <Cart
           cartItems={cartItems}
@@ -90,6 +92,7 @@ const App = () => {
           </Grid>
         ))}
       </Grid>
+      <Footer />
     </Wrapper>
   );
 };
