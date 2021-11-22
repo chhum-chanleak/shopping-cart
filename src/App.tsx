@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "react-query";
 //components
+import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/footer";
 import Cart from "./components/cart/cart";
@@ -10,6 +11,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import Grid from "@material-ui/core/Grid";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import Badge from "@material-ui/core/Badge";
+
 //style
 import { Wrapper, StyledButton } from "./app-style";
 
@@ -71,7 +73,9 @@ const App = () => {
 
   return (
     <Wrapper>
+      <Header />
       <Navbar />
+
       <Drawer anchor="right" open={cartOpen} onClose={() => setCartOpen(false)}>
         <Cart
           cartItems={cartItems}
@@ -84,7 +88,6 @@ const App = () => {
           <AddShoppingCartIcon />
         </Badge>
       </StyledButton>
-
       <Grid container spacing={3}>
         {data?.map((item) => (
           <Grid item key={item.id} xs={12} sm={4}>
