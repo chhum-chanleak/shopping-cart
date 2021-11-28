@@ -1,6 +1,6 @@
 {
   "homepage": "https://chhum-chanleak.github.io/shopping-cart",
-  "name": "new_project",
+  "name": "shopping-cart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
