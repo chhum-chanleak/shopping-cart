@@ -1,35 +1,52 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  #nav {
-    width: 100%;
-    float: left;
-    margin: 0 0 3em 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkorange;
+  .search {
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 12px;
+    width: 30%;
+    background-color: white;
   }
-  #nav li {
-    float: left;
+  .search label {
+    color: gray;
   }
-
-  #nav li a {
-    display: block;
-    padding: 8px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #069;
-    border-right: 1px solid #ccc;
+  .search-icon {
+    margin: 0 4px;
+    color: gray;
+    cursor: pointer;
   }
-
-  #nav li a {
-    display: block;
-    padding: 8px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #069;
-    border-right: 1px solid #ccc;
+  .search input {
+    padding-left: 4px;
+    border-radius: 12px;
   }
-
-  @media only screen and (max-width: 768px) {
+  .cancel-icon {
+    color: gray;
+    cursor: pointer;
+  }
+  .cancel-icon:last-of-type {
+    margin-left: auto;
+  }
+  .icons {
+    display: flex;
+    margin-right: 16px;
+    align-items: center;
+  }
+  .mail {
+    margin: 0 6px;
+    cursor: pointer;
+  }
+  .notifications {
+    margin: 0 6px;
+    cursor: pointer;
+  }
+  .avatar {
+    margin: 0 8px;
+    cursor: pointer;
   }
 `;

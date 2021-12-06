@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "react-query";
 //components
-import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/footer";
 import Cart from "./components/cart/cart";
@@ -73,9 +72,7 @@ const App = () => {
 
   return (
     <Wrapper>
-      <Header />
       <Navbar />
-
       <Drawer anchor="right" open={cartOpen} onClose={() => setCartOpen(false)}>
         <Cart
           cartItems={cartItems}

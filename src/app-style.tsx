@@ -2,7 +2,7 @@ import IconButton from "@material-ui/core/IconButton";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  margin: 40px;
+  margin: 90px 40px;
 `;
 
 export const StyledButton = styled(IconButton)`
@@ -10,4 +10,5 @@ export const StyledButton = styled(IconButton)`
   z-index: 100;
   right: 20px;
   top: 20px;
+  margin-top: 60px;
 `;
