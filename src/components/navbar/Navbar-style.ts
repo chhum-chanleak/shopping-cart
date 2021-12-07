@@ -10,9 +10,11 @@ export const Wrapper = styled.div`
     align-items: center;
     border: 1px solid gray;
     border-radius: 12px;
-    width: 30%;
+    width: 36%;
     background-color: white;
+    margin: 0 12px;
   }
+
   .search label {
     color: gray;
   }
@@ -37,16 +39,18 @@ export const Wrapper = styled.div`
     margin-right: 16px;
     align-items: center;
   }
-  .mail {
-    margin: 0 6px;
-    cursor: pointer;
-  }
-  .notifications {
-    margin: 0 6px;
-    cursor: pointer;
-  }
+
   .avatar {
     margin: 0 8px;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .logo-text {
+      font-size: 18px;
+    }
+    .search {
+      width: 50%;
+    }
   }
 `;

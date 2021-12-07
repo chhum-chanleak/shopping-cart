@@ -4,12 +4,11 @@ import avatar from "../../assets/icons/clothes-hanger.jpg";
 import {
   Avatar,
   AppBar,
-  Badge,
   InputBase,
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { Search, Mail, Notifications, Cancel } from "@material-ui/icons";
+import { Search, Cancel } from "@material-ui/icons";
 import { Wrapper } from "./Navbar-style";
 
 const Navbar = () => {
@@ -28,10 +27,11 @@ const Navbar = () => {
     <AppBar position="fixed">
       <Wrapper>
         <Toolbar>
-          <Typography variant="h6">Online Shop</Typography>
-          <Avatar src={avatar} className="avatar" alt="Chhum" />
+          <Avatar src={avatar} className="avatar" alt="clothes hanger" />
+          <Typography className="logo-text" variant="h6">
+            Online Shop
+          </Typography>
         </Toolbar>
-
         <div className="search">
           <div className="search-icon">
             <Search />
@@ -44,14 +44,6 @@ const Navbar = () => {
           {input !== "" && (
             <Cancel className="cancel-icon" onClick={handleCancel} />
           )}
-        </div>
-        <div className="icons">
-          <Badge badgeContent={2} color="error" className="mail">
-            <Mail />
-          </Badge>
-          <Badge badgeContent={4} color="error" className="notifications">
-            <Notifications />
-          </Badge>
         </div>
       </Wrapper>
     </AppBar>
